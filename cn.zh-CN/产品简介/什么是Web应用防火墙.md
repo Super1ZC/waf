@@ -4,5 +4,5 @@
 
 您购买Web应用防火墙后，把域名解析到Web应用防火墙提供的CNAME地址上，并配置源站服务器IP，即可启用Web应用防火墙。启用之后，您网站所有的公网流量都会先经过Web应用防火墙，恶意攻击流量在Web应用防火墙上被检测过滤，而正常流量返回给源站IP，从而确保源站IP安全、稳定、可用。
 
-关注[WAF学习路径图](https://www.alibabacloud.com/getting-started/learningpath/waf)，由浅入深带您玩转WAF。
+关注[WAF学习路径图](https://help.aliyun.com/learn/learningpath/waf.html)，由浅入深带您玩转WAF。
 
