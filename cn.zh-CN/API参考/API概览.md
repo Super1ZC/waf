@@ -36,3 +36,9 @@
 |ModifyAclRule|修改指定精准访问控制规则。|
 |DescribeAclRules|获取精准访问控制规则列表。|
 
+## 异步任务信息 {#section_hvl_sxj_p2b .section}
+
+|API|描述|
+|:--|:-|
+|DescribeAsyncTaskStatus|查看WAF任务执行状态。|
+
