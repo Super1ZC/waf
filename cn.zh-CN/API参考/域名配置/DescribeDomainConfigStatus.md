@@ -48,9 +48,13 @@ https://wafopenapi.cn-hangzhou.aliyuncs.com/?Action=DescribeDomainConfig
     <?xml version="1.0" encoding="UTF-8"?>
     <DescribeDomainConfigStatusResponse>
         <RequestId>D7861F61-5B61-46CE-A47C-6B19160D5EB0</RequestId>
-        <Status>2</Status>
-        <WafTaskId>aliyun.waf.20180712214032277.qmxI9a</WafTaskId>
-        <ConfigStatus>2</ConfigStatus>
+        <Result>
+            <Status>2</Status>
+            <DomainConfig>
+                <ConfigStatus>2</ConfigStatus>
+            </DomainConfig>
+            <WafTaskId>aliyun.waf.20180712214032277.qmxI9a</WafTaskId>
+        </Result>
     </DescribeDomainConfigStatusResponse>
     ```
 
@@ -58,10 +62,14 @@ https://wafopenapi.cn-hangzhou.aliyuncs.com/?Action=DescribeDomainConfig
 
     ```
     {
-        "RequestId":"D7861F61-5B61-46CE-A47C-6B19160D5EB0", 
-        "Status":2,
-        "ConfigStatus":2,
-        "WafTaskId":"aliyun.waf.20180712214032277.qmxI9a" 
+        "RequestId":"D7861F61-5B61-46CE-A47C-6B19160D5EB0",
+        "Result":{
+            "Status":2,
+            "DomainConfig":{
+                "ConfigStatus":2
+            },
+            "WafTaskId":"aliyun.waf.20180712214032277.qmxI9a"
+        }
     }
     ```
 
