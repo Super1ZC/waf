@@ -39,7 +39,7 @@
 |InDebt|Integer|当前实例是否欠费：-   0：表示已欠费。
 -   1：表示正常。
 
-**说明：** 该参数仅对包年包月WAF实例有意义。
+**说明：** 该参数按量计费WAF实例有意义。
 
 |
 |Region|String|所属地域：-   cn：表示中国大陆地区。
@@ -76,14 +76,16 @@ https://wafopenapi.cn-hangzhou.aliyuncs.com/?Action=DescribePayInfo
     <?xml version="1.0" encoding="UTF-8"?>
     <DescribePayInfoResponse>
         <RequestId>56B40D30-4960-4F19-B7D5-2B1F0EE6CB70</RequestId>
-        <Status>1</Status>
-        <Trial>0</Trial>
-        <InstanceId>waf_elasticity-cn-0xldbqtm005</InstanceId>
-        <InDebt>1</InDebt>
-        <Region>cn</Region>
-        <RemainDay>0</RemainDay>
-        <PayType>2</PayType>
-        <EndDate>1512921600</EndDate>
+        <Result>
+            <Status>1</Status>
+            <Trial>0</Trial>
+            <InstanceId>waf_elasticity-cn-0xldbqtm005</InstanceId>
+            <InDebt>1</InDebt>
+            <Region>cn</Region>
+            <RemainDay>0</RemainDay>
+            <PayType>2</PayType>
+            <EndDate>1512921600</EndDate>
+        </Result>
     </DescribePayInfoResponse>
     ```
 
@@ -92,14 +94,16 @@ https://wafopenapi.cn-hangzhou.aliyuncs.com/?Action=DescribePayInfo
     ```
     {
         "RequestId":"276D7566-31C9-4192-9DD1-51B10DAC29D2",
-        "Status":1,
-        "Trial":0,
-        "InstanceId":"waf_elasticity-cn-0xldbqtm005",
-        "InDebt":1,
-        "Region":"cn",
-        "RemainDay":0,
-        "PayType":2,
-        "EndDate":1512921600
+        "Result":{
+            "Status":1,
+            "Trial":0,
+            "InstanceId":"waf_elasticity-cn-0xldbqtm005",
+            "InDebt":1,
+            "Region":"cn",
+            "RemainDay":0,
+            "PayType":2,
+            "EndDate":1512921600
+        }
     }
     ```
 
