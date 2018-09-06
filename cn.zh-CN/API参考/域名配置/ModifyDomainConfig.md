@@ -30,6 +30,22 @@
 -   1：表示有。
 
 |
+|HttpsRedirect|Integer|否|是否开启HTTPS强制跳转，取值：-   0：表示关闭
+-   1：表示开启
+
+默认值为0，即默认关闭HTTPS强制跳转。
+
+**说明：** 仅使用HTTPS访问协议时需填写该请求参数。开启强制跳转后HTTP请求将显示为HTTPS，默认跳转至443端口。
+
+|
+|HttpToUserIp|Integer|否|是否开启HTTPS访问请求通过HTTP协议转发回源站，取值：-   0：表示关闭
+-   1：表示开启
+
+默认值为0，即默认关闭HTTP回源。
+
+**说明：** 如果您的网站不支持HTTPS回源，开启HTTP回源（默认回源端口是80端口）功能项，即可通过WAF实现HTTPS访问。
+
+|
 
 ## 返回参数 {#section_ugs_f1g_cz .section}
 
@@ -55,6 +71,8 @@ https://wafopenapi.cn-hangzhou.aliyuncs.com/?Action=ModifyDomainConfig
 &HttpPort=[80]
 &HttpsPort=[443]
 &IsAccessProduct=0
+&HttpsRedirect=1
+&HttpToUserIp=0
 &公共请求参数
 ```
 
@@ -66,8 +84,10 @@ https://wafopenapi.cn-hangzhou.aliyuncs.com/?Action=ModifyDomainConfig
     <?xml version="1.0" encoding="UTF-8"?>
     <ModifyDomainConfigResponse>
         <RequestId>D7861F61-5B61-46CE-A47C-6B19160D5EB0</RequestId>
-        <Status>2</Status>
-        <WafTaskId>aliyun.waf.20180712214032277.qmxI9a</WafTaskId>
+        <Result>
+            <Status>2</Status>
+            <WafTaskId>aliyun.waf.20180712214032277.qmxI9a</WafTaskId>
+        </Result>
     </ModifyDomainConfigResponse>
     ```
 
@@ -76,8 +96,10 @@ https://wafopenapi.cn-hangzhou.aliyuncs.com/?Action=ModifyDomainConfig
     ```
     {
         "RequestId":"D7861F61-5B61-46CE-A47C-6B19160D5EB0", 
-        "Status":2,
-        "WafTaskId":"aliyun.waf.20180712214032277.qmxI9a" 
+        "Result":{
+            "Status":2,
+            "WafTaskId":"aliyun.waf.20180712214032277.qmxI9a"
+        } 
     }
     ```
 
